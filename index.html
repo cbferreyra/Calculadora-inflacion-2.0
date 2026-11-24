@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Inflación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora de Inflación para Alquileres</h1>
+
+    <div class="input-container">
+        <label for="initial-month">Mes y Año Inicial:</label>
+        <input type="month" id="initial-month">
+        <label for="initial-value">Valor Inicial:</label>
+        <input type="number" id="initial-value">
+        <button id="set-initial-month">Ingresar Mes Inicial</button>
+    </div>
+
+    <div class="input-container">
+        <label for="inflation-rate">Inflación Mensual (%):</label>
+        <input type="number" id="inflation-rate" step="0.01">
+        <button id="add-month">Agregar Mes</button>
+    </div>
+
+    <button id="delete-last-row">Eliminar Última Fila</button>
+    <button id="export-excel">Exportar a Excel</button>
+
+    <table id="rent-table">
+        <thead>
+            <tr>
+                <th>Mes</th>
+                <th>Valor Inicial</th>
+                <th>Inflación (%)</th>
+                <th>Incremento</th>
+                <th>Valor Final</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
